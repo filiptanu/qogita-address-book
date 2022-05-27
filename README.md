@@ -48,3 +48,10 @@ An admin user has been created for this project:
 - password: `admin`
 
 TODO (filiptanu): Currently the project is using SQLite as a database. Migrate the database setup to a production-ready relational database (e.g. PostgreSQL).
+
+To create a migration for the `Address` model:
+
+```
+python manage.py makemigrations addresses
+python manage.py migrate addresses
+```
