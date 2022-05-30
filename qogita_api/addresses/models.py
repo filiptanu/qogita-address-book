@@ -14,10 +14,12 @@ class Address(models.Model):
     country = CountryField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey('auth.User', related_name='addresses', on_delete=models.CASCADE)
     
     class Meta:
         unique_together = (
             'street_name',
             'street_number',
-            'zip_code'
+            'zip_code',
+            'user'
         )
