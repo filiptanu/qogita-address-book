@@ -1,18 +1,19 @@
+from rest_framework.views import APIView
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
+from django.http import Http404
 from addresses.models import Address
 from addresses.serializers import AddressSerializer
 
 
-@api_view(['GET', 'POST'])
-def address_list(request, format=None):
-    if request.method == 'GET':
+class AddressList(APIView):
+    def get(self, request, format=None):
         addresses = Address.objects.all()
         serializer = AddressSerializer(addresses, many=True)
         return Response(serializer.data)
 
-    elif request.method == 'POST':
+    def post(self, request, format=None):
         serializer = AddressSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -20,24 +21,27 @@ def address_list(request, format=None):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-def address_detail(request, address_uuid, format=None):
-    try:
-        address = Address.objects.get(uuid=address_uuid)
-    except Address.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
+class AddressDetail(APIView):
+    def get_object(self, address_uuid):
+        try:
+            return Address.objects.get(uuid=address_uuid)
+        except Snippet.DoesNotExist:
+            raise Http404
 
-    if request.method == 'GET':
+    def get(self, request, address_uuid, format=None):
+        address = self.get_object(address_uuid)
         serializer = AddressSerializer(address)
         return Response(serializer.data)
 
-    elif request.method == 'PUT':
+    def put(self, request, address_uuid, format=None):
+        address = self.get_object(address_uuid)
         serializer = AddressSerializer(address, data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    elif request.method == 'DELETE':
+    def delete(self, request, address_uuid, format=None):
+        address = self.get_object(address_uuid)
         address.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
