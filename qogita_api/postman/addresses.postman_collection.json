@@ -12,7 +12,7 @@
 					"name": "Validation - same address",
 					"item": [
 						{
-							"name": "POST /addresses - admin, address one",
+							"name": "POST /addresses/ - admin, address one",
 							"event": [
 								{
 									"listen": "test",
@@ -42,7 +42,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses",
+									"raw": "http://127.0.0.1:8000/addresses/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -52,14 +52,15 @@
 									],
 									"port": "8000",
 									"path": [
-										"addresses"
+										"addresses",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "POST /addresses - admin, address two",
+							"name": "POST /addresses/ - admin, address two",
 							"event": [
 								{
 									"listen": "test",
@@ -86,7 +87,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses",
+									"raw": "http://127.0.0.1:8000/addresses/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -96,14 +97,15 @@
 									],
 									"port": "8000",
 									"path": [
-										"addresses"
+										"addresses",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "DELETE /addresses/<uuid> - admin, address one",
+							"name": "DELETE /addresses/<uuid>/ - admin, address one",
 							"event": [
 								{
 									"listen": "test",
@@ -121,7 +123,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -132,7 +134,8 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
@@ -144,7 +147,7 @@
 					"name": "Basic CRUD",
 					"item": [
 						{
-							"name": "GET /addresses",
+							"name": "GET /addresses/",
 							"event": [
 								{
 									"listen": "test",
@@ -162,7 +165,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses",
+									"raw": "http://127.0.0.1:8000/addresses/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -172,14 +175,15 @@
 									],
 									"port": "8000",
 									"path": [
-										"addresses"
+										"addresses",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "POST /addresses",
+							"name": "POST /addresses/",
 							"event": [
 								{
 									"listen": "test",
@@ -209,7 +213,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses",
+									"raw": "http://127.0.0.1:8000/addresses/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -219,14 +223,15 @@
 									],
 									"port": "8000",
 									"path": [
-										"addresses"
+										"addresses",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "GET /addresses/<uuid>",
+							"name": "GET /addresses/<uuid>/",
 							"event": [
 								{
 									"listen": "test",
@@ -244,7 +249,7 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -255,14 +260,15 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "PUT /addresses/<uuid>",
+							"name": "PUT /addresses/<uuid>/",
 							"event": [
 								{
 									"listen": "test",
@@ -289,7 +295,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -300,14 +306,15 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "DELETE /addresses/<uuid>",
+							"name": "DELETE /addresses/<uuid>/",
 							"event": [
 								{
 									"listen": "test",
@@ -325,7 +332,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -336,7 +343,8 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
@@ -353,7 +361,7 @@
 					"name": "Update/delete different user's address",
 					"item": [
 						{
-							"name": "POST /addresses - admin",
+							"name": "POST /addresses/ - admin",
 							"event": [
 								{
 									"listen": "test",
@@ -383,7 +391,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses",
+									"raw": "http://127.0.0.1:8000/addresses/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -393,14 +401,15 @@
 									],
 									"port": "8000",
 									"path": [
-										"addresses"
+										"addresses",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "PUT /addresses/<uuid> - admin2",
+							"name": "PUT /addresses/<uuid>/ - admin2",
 							"event": [
 								{
 									"listen": "test",
@@ -442,7 +451,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -453,14 +462,15 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "DELETE /addresses/<uuid> - admin2",
+							"name": "DELETE /addresses/<uuid>/ - admin2",
 							"event": [
 								{
 									"listen": "test",
@@ -493,7 +503,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -504,14 +514,15 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "DELETE /addresses/<uuid> - admin",
+							"name": "DELETE /addresses/<uuid>/ - admin",
 							"event": [
 								{
 									"listen": "test",
@@ -529,7 +540,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -540,7 +551,8 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{address_uuid}}"
+										"{{address_uuid}}",
+										""
 									]
 								}
 							},
@@ -552,7 +564,7 @@
 					"name": "No auth",
 					"item": [
 						{
-							"name": "POST /addresses - no auth",
+							"name": "POST /addresses/ - no auth",
 							"event": [
 								{
 									"listen": "test",
@@ -579,7 +591,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses",
+									"raw": "http://127.0.0.1:8000/addresses/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -589,14 +601,15 @@
 									],
 									"port": "8000",
 									"path": [
-										"addresses"
+										"addresses",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "PUT /addresses/<uuid> - no auth",
+							"name": "PUT /addresses/<uuid>/ - no auth",
 							"event": [
 								{
 									"listen": "test",
@@ -623,7 +636,7 @@
 									}
 								},
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{$guid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{$guid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -634,14 +647,15 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{$guid}}"
+										"{{$guid}}",
+										""
 									]
 								}
 							},
 							"response": []
 						},
 						{
-							"name": "DELETE /addresses/<uuid> - no auth",
+							"name": "DELETE /addresses/<uuid>/ - no auth",
 							"event": [
 								{
 									"listen": "test",
@@ -659,7 +673,7 @@
 								"method": "DELETE",
 								"header": [],
 								"url": {
-									"raw": "http://127.0.0.1:8000/addresses/{{$guid}}",
+									"raw": "http://127.0.0.1:8000/addresses/{{$guid}}/",
 									"protocol": "http",
 									"host": [
 										"127",
@@ -670,7 +684,8 @@
 									"port": "8000",
 									"path": [
 										"addresses",
-										"{{$guid}}"
+										"{{$guid}}",
+										""
 									]
 								}
 							},

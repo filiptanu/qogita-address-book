@@ -1,13 +1,12 @@
 from django.urls import path, include
-from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.routers import DefaultRouter
 from addresses import views
 
-urlpatterns = [
-    path('addresses', views.AddressList.as_view()),
-    path('addresses/<uuid:pk>', views.AddressDetail.as_view()),
-    path('users', views.UserList.as_view()),
-    path('users/<int:pk>', views.UserDetail.as_view()),
-    path('api-auth/', include('rest_framework.urls')),
-]
 
-urlpatterns = format_suffix_patterns(urlpatterns)
+router = DefaultRouter()
+router.register(r'addresses', views.AddressViewSet,basename="addresses")
+router.register(r'users', views.UserViewSet,basename="users")
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
