@@ -351,6 +351,153 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Delete many addresses",
+					"item": [
+						{
+							"name": "POST /addresses/ - address one",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"address_uuid\", jsonData.uuid);",
+											"",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"street_name\": \"Venijamin Machukovski\",\n    \"street_number\": \"34/1-71\",\n    \"zip_code\": \"1000\",\n    \"city\": \"Skopje\",\n    \"country\": \"MK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/addresses/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"addresses",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /addresses/ - address two",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"address2_uuid\", jsonData.uuid);",
+											"",
+											"pm.test(\"Status code is 201\", function () {",
+											"    pm.response.to.have.status(201);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"street_name\": \"Venijamin Machukovski\",\n    \"street_number\": \"34/1-72\",\n    \"zip_code\": \"1000\",\n    \"city\": \"Skopje\",\n    \"country\": \"MK\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/addresses/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"addresses",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "POST /addresses/delete_many/",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 204\", function () {",
+											"    pm.response.to.have.status(204);",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"uuids\": [\n        \"{{address_uuid}}\",\n        \"{{address2_uuid}}\"\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/addresses/delete_many/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"addresses",
+										"delete_many",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				}
 			]
 		},
