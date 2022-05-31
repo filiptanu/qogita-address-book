@@ -12,7 +12,7 @@
 					"name": "Validation - same address",
 					"item": [
 						{
-							"name": "POST /addresses/ - admin, address one",
+							"name": "POST /addresses - admin, address one",
 							"event": [
 								{
 									"listen": "test",
@@ -59,7 +59,7 @@
 							"response": []
 						},
 						{
-							"name": "POST /addresses/ - admin, address two",
+							"name": "POST /addresses - admin, address two",
 							"event": [
 								{
 									"listen": "test",
@@ -144,7 +144,7 @@
 					"name": "Basic CRUD",
 					"item": [
 						{
-							"name": "GET /addresses/",
+							"name": "GET /addresses",
 							"event": [
 								{
 									"listen": "test",
@@ -179,7 +179,7 @@
 							"response": []
 						},
 						{
-							"name": "POST /addresses/",
+							"name": "POST /addresses",
 							"event": [
 								{
 									"listen": "test",
@@ -353,7 +353,7 @@
 					"name": "Update/delete different user's address",
 					"item": [
 						{
-							"name": "POST /addresses/ - admin",
+							"name": "POST /addresses - admin",
 							"event": [
 								{
 									"listen": "test",
@@ -552,7 +552,7 @@
 					"name": "No auth",
 					"item": [
 						{
-							"name": "POST /addresses/ - no auth",
+							"name": "POST /addresses - no auth",
 							"event": [
 								{
 									"listen": "test",
