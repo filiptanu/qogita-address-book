@@ -27,7 +27,7 @@ services:
     command:
       run addresses.postman_collection.json -k
       -e docker.postman_environment.json
-      -r cli,json
+      -r cli,json,emojitrain
       --reporter-json-export="reports/addresses.postman_collection.json"
     volumes:
       - ./postman:/etc/newman

@@ -4,28 +4,16 @@ This repository contains implementation of the specification defined in [back-en
 
 ## Requirements
 
-- Python 3
+- Docker
+- Docker Compose
 
-In order to isolate this project's dependencies from the rest of the system, you can create and use a virtual environment:
+## Run the API
 
-```
-python3 -m venv qogita-api-venv
-source qogita-api-venv/bin/activate
-```
-
-To install the project's dependencies:
+To run the API, along with the integration tests, just run:
 
 ```
-python -m pip install -r requirements.txt
+docker-compose up
 ```
-
-To run the project:
-
-```
-cd qogita_api
-python manage.py runserver
-```
-
 ## Reference
 
 TODO (filiptanu): Maybe remove this section in the future
@@ -33,8 +21,7 @@ TODO (filiptanu): Maybe remove this section in the future
 This project has been generated using `django-admin`. You do not need to run the following commands, they are here just as a reference:
 
 ```
-django-admin startproject qogita_api
-cd qogita_api
+django-admin startproject qogita_api .
 python manage.py startapp addresses
 
 python manage.py migrate
