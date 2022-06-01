@@ -9,18 +9,20 @@ This repository contains implementation of the specification defined in [back-en
 
 ## Running the API
 
-To run the API, run:
+To run the API:
 
 ```
 docker-compose run --service-ports api
 ```
 
-To run the integration tests, run:
+To run the integration tests:
 
 ```
 docker-compose run postman
 ```
 ## Development references
+
+These are just code snippets used during development. Do not run them.
 
 ```
 django-admin startproject qogita_api .
