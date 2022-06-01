@@ -39,10 +39,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -79,10 +84,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -110,10 +120,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -147,10 +162,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -190,10 +210,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -221,10 +246,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -262,10 +292,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -294,10 +329,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -343,10 +383,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -386,10 +431,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -426,10 +476,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/delete_many/",
+							"raw": "http://127.0.0.1:8000/addresses/delete_many/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"delete_many",
@@ -475,10 +530,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -533,10 +593,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -567,10 +632,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/?zip_code=1000",
+							"raw": "http://127.0.0.1:8000/addresses/?zip_code=1000",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -607,10 +677,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/?street_name=Jane%20Sandanski",
+							"raw": "http://127.0.0.1:8000/addresses/?street_name=Jane%20Sandanski",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -644,10 +719,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -691,10 +771,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid2}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid2}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid2}}",
@@ -740,10 +825,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -795,10 +885,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -842,10 +937,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -874,10 +974,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{address_uuid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{address_uuid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{address_uuid}}",
@@ -920,10 +1025,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/",
+							"raw": "http://127.0.0.1:8000/addresses/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								""
@@ -960,10 +1070,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{root_url}}/addresses/{{$guid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{$guid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{$guid}}",
@@ -992,10 +1107,15 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{root_url}}/addresses/{{$guid}}/",
+							"raw": "http://127.0.0.1:8000/addresses/{{$guid}}/",
+							"protocol": "http",
 							"host": [
-								"{{root_url}}"
+								"127",
+								"0",
+								"0",
+								"1"
 							],
+							"port": "8000",
 							"path": [
 								"addresses",
 								"{{$guid}}",

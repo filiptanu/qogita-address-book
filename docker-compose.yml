@@ -22,3 +22,15 @@ services:
     #   - POSTGRES_PASSWORD=postgres
     # depends_on:
     #   - db
+  postman:
+    image: postman/newman:alpine
+    command:
+      run addresses.postman_collection.json -k
+      -e docker.postman_environment.json
+      -r cli,json
+      --reporter-json-export="reports/addresses.postman_collection.json"
+    volumes:
+      - ./postman:/etc/newman
+    depends_on:
+      - "api"
+      # - "db"
