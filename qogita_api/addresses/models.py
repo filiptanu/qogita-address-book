@@ -23,3 +23,5 @@ class Address(models.Model):
             'zip_code',
             'user'
         )
+
+        ordering = ['uuid']

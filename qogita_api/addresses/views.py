@@ -11,6 +11,7 @@ class AddressViewSet(viewsets.ModelViewSet):
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsUserOrReadOnly]
+    filter_fields = ['street_name', 'street_number', 'zip_code', 'city', 'country', 'user']
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
