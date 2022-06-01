@@ -7,12 +7,18 @@ This repository contains implementation of the specification defined in [back-en
 - Docker
 - Docker Compose
 
-## Run the API
+## Running the API
 
-To run the API, along with the integration tests, just run:
+To run the API, run:
 
 ```
-docker-compose up
+docker-compose run api
+```
+
+To run the integration tests, run:
+
+```
+docker-compose run postman
 ```
 ## Reference
 

@@ -1,36 +1,41 @@
 version: "3.9"
    
 services:
-  # db:
-  #   image: postgres
-  #   volumes:
-  #     - ./data/db:/var/lib/postgresql/data
-  #   environment:
-  #     - POSTGRES_DB=postgres
-  #     - POSTGRES_USER=postgres
-  #     - POSTGRES_PASSWORD=postgres
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
   api:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: ./startup.sh
     volumes:
-      - .:/code
+      - .:/api
     ports:
       - "8000:8000"
-    # environment:
-    #   - POSTGRES_NAME=postgres
-    #   - POSTGRES_USER=postgres
-    #   - POSTGRES_PASSWORD=postgres
-    # depends_on:
-    #   - db
-  postman:
-    image: postman/newman:alpine
-    command:
-      run addresses.postman_collection.json -k
-      -e docker.postman_environment.json
-      -r cli,json,emojitrain
-      --reporter-json-export="reports/addresses.postman_collection.json"
-    volumes:
-      - ./postman:/etc/newman
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=host.docker.internal
+      - POSTGRES_PORT=5432
     depends_on:
-      - "api"
-      # - "db"
+      - db
+  # postman:
+  #   image: postman/newman:alpine
+  #   command:
+  #     run addresses.postman_collection.json -k
+  #     -e docker.postman_environment.json
+  #     -r cli,json,emojitrain
+  #     --reporter-json-export="reports/addresses.postman_collection.json"
+  #   volumes:
+  #     - ./postman:/etc/newman
+  #   depends_on:
+  #     - "api"
+volumes:
+  db-data:
