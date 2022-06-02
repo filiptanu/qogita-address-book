@@ -5,7 +5,7 @@ This repository contains implementation of the specification defined in [back-en
 ## Requirements
 
 - Docker
-- Docker Compose
+- Docker Compose V1
 
 ## Running the API
 
